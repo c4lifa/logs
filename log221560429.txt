@@ -1,9 +1,11 @@
-travis_fold:start:worker_info[0K[33;1mWorker information[0m
+travis_fold:start:worker_info
+[0K[33;1mWorker information[0m
 hostname: i-03ac6f9-precise-production-2-worker-org-docker.travisci.net:0b9cad47-da70-4c18-bb4a-60df2db29811
 version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
 instance: d4131d2:travis:node_js
 startup: 746.24817ms
-travis_fold:end:worker_info[0Kache Ant(TM) version 1.8.2 compiled on December 3 2011
+travis_fold:end:worker_info
+[0Kache Ant(TM) version 1.8.2 compiled on December 3 2011
 [34m[1mmvn -version[0m
 Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T17:29:23+00:00)
 Maven home: /usr/local/maven
@@ -11,4 +13,5 @@ Java version: 1.7.0_76, vendor: Oracle Corporation
 Java home: /usr/lib/jvm/java-7-oracle/jre
 Default locale: en_US, platform encoding: ANSI_X3.4-1968
 OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
-travis_fold:end:system_info[0K
+travis_fold:end:system_info
+[0K asasasas
