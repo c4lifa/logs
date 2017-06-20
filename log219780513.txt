@@ -1,15 +1,15 @@
 travis_fold:start:worker_info[0K[33;1mWorker information[0m
-hostname: i-0ffa936-precise-production-2-worker-org-docker.travisci.net:924d504f-a107-4350-a575-f1958210f297
+hostname: i-04b1b08-precise-production-2-worker-org-docker.travisci.net:f289672e-2900-479b-b549-3590956e3b4f
 version: v2.5.0 https://github.com/travis-ci/worker/tree/da3a43228dffc0fcca5a46569ca786b22991979f
-instance: dfd7a1e:travis:php
-startup: 899.915277ms
+instance: 5556bb5:travis:php
+startup: 672.932259ms
 travis_fold:end:worker_info[0Ktravis_fold:start:system_info[0K[33;1mBuild system information[0m
 Build language: php
 Build group: stable
 Build dist: precise
 Build id: 219780512
 Job id: 219780513
-travis-build version: 4a669c7bf
+travis-build version: 9609aa7f9
 [34m[1mBuild image provisioning date and time[0m
 Thu Feb  5 15:09:33 UTC 2015
 [34m[1mOperating System Details[0m
@@ -81,14 +81,14 @@ Suggested packages:
   glibc-doc
 The following packages will be upgraded:
   libc-bin libc-dev-bin libc6 libc6-dev
-4 upgraded, 0 newly installed, 0 to remove and 271 not upgraded.
+4 upgraded, 0 newly installed, 0 to remove and 273 not upgraded.
 Need to get 8,856 kB of archives.
 After this operation, 13.3 kB of additional disk space will be used.
 Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6-dev amd64 2.15-0ubuntu10.18 [2,948 kB]
 Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-dev-bin amd64 2.15-0ubuntu10.18 [84.5 kB]
 Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc-bin amd64 2.15-0ubuntu10.18 [1,178 kB]
 Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libc6 amd64 2.15-0ubuntu10.18 [4,646 kB]
-Fetched 8,856 kB in 0s (28.4 MB/s)
+Fetched 8,856 kB in 0s (12.5 MB/s)
 Preconfiguring packages ...
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 70845 files and directories currently installed.)
 Preparing to replace libc6-dev 2.15-0ubuntu10.10 (using .../libc6-dev_2.15-0ubuntu10.18_amd64.deb) ...
@@ -107,50 +107,73 @@ Setting up libc-dev-bin (2.15-0ubuntu10.18) ...
 Setting up libc6-dev (2.15-0ubuntu10.18) ...
 Processing triggers for libc-bin ...
 ldconfig deferred processing now taking place
-travis_fold:end:fix.CVE-2015-7547[0Ktravis_fold:start:git.checkout[0Ktravis_time:start:1b0e9c22[0K$ git clone --depth=50 --branch=master https://github.com/c4lifa/travis.git c4lifa/travis
+travis_fold:end:fix.CVE-2015-7547[0Ktravis_fold:start:update_libssl1.0.0[0K$ sudo apt-get install libssl1.0.0
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 10%Reading package lists... 10%Reading package lists... 11%Reading package lists... 11%Reading package lists... 31%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 56%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 58%Reading package lists... 85%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 78%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following extra packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl-dev libssl1.0.0
+2 upgraded, 0 newly installed, 0 to remove and 271 not upgraded.
+Need to get 2,634 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+0% [Working]            Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.39 [1,580 kB]
+            1% [1 libssl-dev 22.8 kB/1,580 kB 1%]                                     Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.39 [1,054 kB]
+                                     72% [2 libssl1.0.0 328 kB/1,054 kB 31%]                                       100% [Working]              Fetched 2,634 kB in 0s (13.7 MB/s)
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 70844 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.21 (using .../libssl-dev_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.21 (using .../libssl1.0.0_1.0.1-4ubuntu5.39_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.39) ...
+Setting up libssl-dev (1.0.1-4ubuntu5.39) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+travis_fold:end:update_libssl1.0.0[0Ktravis_fold:start:git.checkout[0Ktravis_time:start:310026c0[0K$ git clone --depth=50 --branch=master https://github.com/c4lifa/travis.git c4lifa/travis
 Cloning into 'c4lifa/travis'...
-remote: Counting objects: 42, done.[K
-remote: Compressing objects:   3% (1/30)   [Kremote: Compressing objects:   6% (2/30)   [Kremote: Compressing objects:  10% (3/30)   [Kremote: Compressing objects:  13% (4/30)   [Kremote: Compressing objects:  16% (5/30)   [Kremote: Compressing objects:  20% (6/30)   [Kremote: Compressing objects:  23% (7/30)   [Kremote: Compressing objects:  26% (8/30)   [Kremote: Compressing objects:  30% (9/30)   [Kremote: Compressing objects:  33% (10/30)   [Kremote: Compressing objects:  36% (11/30)   [Kremote: Compressing objects:  40% (12/30)   [Kremote: Compressing objects:  43% (13/30)   [Kremote: Compressing objects:  46% (14/30)   [Kremote: Compressing objects:  50% (15/30)   [Kremote: Compressing objects:  53% (16/30)   [Kremote: Compressing objects:  56% (17/30)   [Kremote: Compressing objects:  60% (18/30)   [Kremote: Compressing objects:  63% (19/30)   [Kremote: Compressing objects:  66% (20/30)   [Kremote: Compressing objects:  70% (21/30)   [Kremote: Compressing objects:  73% (22/30)   [Kremote: Compressing objects:  76% (23/30)   [Kremote: Compressing objects:  80% (24/30)   [Kremote: Compressing objects:  83% (25/30)   [Kremote: Compressing objects:  86% (26/30)   [Kremote: Compressing objects:  90% (27/30)   [Kremote: Compressing objects:  93% (28/30)   [Kremote: Compressing objects:  96% (29/30)   [Kremote: Compressing objects: 100% (30/30)   [Kremote: Compressing objects: 100% (30/30), done.[K
-remote: Total 42 (delta 12), reused 29 (delta 7), pack-reused 0[K
-Unpacking objects:   2% (1/42)   Unpacking objects:   4% (2/42)   Unpacking objects:   7% (3/42)   Unpacking objects:   9% (4/42)   Unpacking objects:  11% (5/42)   Unpacking objects:  14% (6/42)   Unpacking objects:  16% (7/42)   Unpacking objects:  19% (8/42)   Unpacking objects:  21% (9/42)   Unpacking objects:  23% (10/42)   Unpacking objects:  26% (11/42)   Unpacking objects:  28% (12/42)   Unpacking objects:  30% (13/42)   Unpacking objects:  33% (14/42)   Unpacking objects:  35% (15/42)   Unpacking objects:  38% (16/42)   Unpacking objects:  40% (17/42)   Unpacking objects:  42% (18/42)   Unpacking objects:  45% (19/42)   Unpacking objects:  47% (20/42)   Unpacking objects:  50% (21/42)   Unpacking objects:  52% (22/42)   Unpacking objects:  54% (23/42)   Unpacking objects:  57% (24/42)   Unpacking objects:  59% (25/42)   Unpacking objects:  61% (26/42)   Unpacking objects:  64% (27/42)   Unpacking objects:  66% (28/42)   Unpacking objects:  69% (29/42)   Unpacking objects:  71% (30/42)   Unpacking objects:  73% (31/42)   Unpacking objects:  76% (32/42)   Unpacking objects:  78% (33/42)   Unpacking objects:  80% (34/42)   Unpacking objects:  83% (35/42)   Unpacking objects:  85% (36/42)   Unpacking objects:  88% (37/42)   Unpacking objects:  90% (38/42)   Unpacking objects:  92% (39/42)   Unpacking objects:  95% (40/42)   Unpacking objects:  97% (41/42)   Unpacking objects: 100% (42/42)   Unpacking objects: 100% (42/42), done.
+remote: Counting objects: 81, done.[K
+remote: Total 81 (delta 0), reused 0 (delta 0), pack-reused 81[K
+Unpacking objects:   1% (1/81)   Unpacking objects:   2% (2/81)   Unpacking objects:   3% (3/81)   Unpacking objects:   4% (4/81)   Unpacking objects:   6% (5/81)   Unpacking objects:   7% (6/81)   Unpacking objects:   8% (7/81)   Unpacking objects:   9% (8/81)   Unpacking objects:  11% (9/81)   Unpacking objects:  12% (10/81)   Unpacking objects:  13% (11/81)   Unpacking objects:  14% (12/81)   Unpacking objects:  16% (13/81)   Unpacking objects:  17% (14/81)   Unpacking objects:  18% (15/81)   Unpacking objects:  19% (16/81)   Unpacking objects:  20% (17/81)   Unpacking objects:  22% (18/81)   Unpacking objects:  23% (19/81)   Unpacking objects:  24% (20/81)   Unpacking objects:  25% (21/81)   Unpacking objects:  27% (22/81)   Unpacking objects:  28% (23/81)   Unpacking objects:  29% (24/81)   Unpacking objects:  30% (25/81)   Unpacking objects:  32% (26/81)   Unpacking objects:  33% (27/81)   Unpacking objects:  34% (28/81)   Unpacking objects:  35% (29/81)   Unpacking objects:  37% (30/81)   Unpacking objects:  38% (31/81)   Unpacking objects:  39% (32/81)   Unpacking objects:  40% (33/81)   Unpacking objects:  41% (34/81)   Unpacking objects:  43% (35/81)   Unpacking objects:  44% (36/81)   Unpacking objects:  45% (37/81)   Unpacking objects:  46% (38/81)   Unpacking objects:  48% (39/81)   Unpacking objects:  49% (40/81)   Unpacking objects:  50% (41/81)   Unpacking objects:  51% (42/81)   Unpacking objects:  53% (43/81)   Unpacking objects:  54% (44/81)   Unpacking objects:  55% (45/81)   Unpacking objects:  56% (46/81)   Unpacking objects:  58% (47/81)   Unpacking objects:  59% (48/81)   Unpacking objects:  60% (49/81)   Unpacking objects:  61% (50/81)   Unpacking objects:  62% (51/81)   Unpacking objects:  64% (52/81)   Unpacking objects:  65% (53/81)   Unpacking objects:  66% (54/81)   Unpacking objects:  67% (55/81)   Unpacking objects:  69% (56/81)   Unpacking objects:  70% (57/81)   Unpacking objects:  71% (58/81)   Unpacking objects:  72% (59/81)   Unpacking objects:  74% (60/81)   Unpacking objects:  75% (61/81)   Unpacking objects:  76% (62/81)   Unpacking objects:  77% (63/81)   Unpacking objects:  79% (64/81)   Unpacking objects:  80% (65/81)   Unpacking objects:  81% (66/81)   Unpacking objects:  82% (67/81)   Unpacking objects:  83% (68/81)   Unpacking objects:  85% (69/81)   Unpacking objects:  86% (70/81)   Unpacking objects:  87% (71/81)   Unpacking objects:  88% (72/81)   Unpacking objects:  90% (73/81)   Unpacking objects:  91% (74/81)   Unpacking objects:  92% (75/81)   Unpacking objects:  93% (76/81)   Unpacking objects:  95% (77/81)   Unpacking objects:  96% (78/81)   Unpacking objects:  97% (79/81)   Unpacking objects:  98% (80/81)   Unpacking objects: 100% (81/81)   Unpacking objects: 100% (81/81), done.
 Checking connectivity... done.
 
-travis_time:end:1b0e9c22:start=1491586078445085034,finish=1491586078851350438,duration=406265404[0K$ cd c4lifa/travis
+travis_time:end:310026c0:start=1497917651080082311,finish=1497917651981178717,duration=901096406[0K$ cd c4lifa/travis
 $ git checkout -qf 271c9296f7836ed6e90446bea68635e6396d577a
-travis_fold:end:git.checkout[0Ktravis_time:start:114f25f8[0K$ phpenv global 5.5 2>/dev/null
+travis_fold:end:git.checkout[0Ktravis_time:start:1b2e6768[0K$ phpenv global 5.5 2>/dev/null
 
-travis_time:end:114f25f8:start=1491586081584047603,finish=1491586081608424047,duration=24376444[0Ktravis_time:start:0288198c[0K$ phpenv global 5.5
+travis_time:end:1b2e6768:start=1497917658852592709,finish=1497917658911692874,duration=59100165[0Ktravis_time:start:0d6a140c[0K$ phpenv global 5.5
 
-travis_time:end:0288198c:start=1491586081613416180,finish=1491586081631986509,duration=18570329[0Ktravis_time:start:1b85d7a5[0K$ composer self-update 1.0.0
+travis_time:end:0d6a140c:start=1497917658927728324,finish=1497917658972467938,duration=44739614[0Ktravis_time:start:32c589ce[0K$ composer self-update 1.0.0
 Updating to version [32m1.0.0[39m.
     Downloading: [33mconnection...[39m    Downloading: [33m100%[39m         
 Use [32mcomposer self-update --rollback[39m to return to version 1d8f05f1dd0e390f253f79ea86cd505178360019
 
-travis_time:end:1b85d7a5:start=1491586081669159332,finish=1491586083539153332,duration=1869994000[0Ktravis_time:start:2ee87680[0K$ composer self-update
+travis_time:end:32c589ce:start=1497917659440561221,finish=1497917662363908242,duration=2923347021[0Ktravis_time:start:05128284[0K$ composer self-update
 [30;43mYou are running composer with xdebug enabled. This has a major impact on runtime performance. See https://getcomposer.org/xdebug[39;49m
-Updating to version [32m1.4.1[39m.
+Updating to version [32m1.4.2[39m.
     Downloading: [33mConnecting...[39m    Downloading: [33m100%[39m         
 Use [32mcomposer self-update --rollback[39m to return to version 1.0.0
 
-travis_time:end:2ee87680:start=1491586083543523371,finish=1491586085812679932,duration=2269156561[0K$ php --version
+travis_time:end:05128284:start=1497917662372278390,finish=1497917665965249257,duration=3592970867[0K$ php --version
 PHP 5.5.21 (cli) (built: Feb 12 2015 01:29:17) 
 Copyright (c) 1997-2014 The PHP Group
 Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
     with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2014, by Zend Technologies
     with Xdebug v2.2.7, Copyright (c) 2002-2015, by Derick Rethans
 $ composer --version
-[32mComposer[39m version [33m1.4.1[39m 2017-03-10 09:29:45
+[32mComposer[39m version [33m1.4.2[39m 2017-05-17 08:17:52
 [0m
-travis_time:start:03878a40[0K$ phpunit Test.php
+travis_time:start:16ed123a[0K$ phpunit Test.php
 PHPUnit 4.5.0 by Sebastian Bergmann and contributors.
 
 .
 
-Time: 62 ms, Memory: 3.75Mb
+Time: 117 ms, Memory: 3.75Mb
 
 OK (1 test, 1 assertion)
 
-travis_time:end:03878a40:start=1491586086055440739,finish=1491586086192901542,duration=137460803[0K
+travis_time:end:16ed123a:start=1497917666445691795,finish=1497917666748136729,duration=302444934[0K
 [32;1mThe command "phpunit Test.php" exited with 0.[0m
 
 Done. Your build exited with 0.
